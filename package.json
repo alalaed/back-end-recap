@@ -1,0 +1,30 @@
+{
+  "name": "back-end-recap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alalaed/back-end-recap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alalaed/back-end-recap/issues"
+  },
+  "homepage": "https://github.com/alalaed/back-end-recap#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-list-endpoints": "^6.0.0",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

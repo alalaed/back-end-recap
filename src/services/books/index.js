@@ -43,7 +43,12 @@ booksRouter.get("/:bookId", (req, res) => {
 
 booksRouter.put("/:bookId", (req, res) => {
   const books = getBooks();
-  const edited = books.findIndex((book) => book.id === req.params.bookId);
+  const index = books.findIndex((book) => book.id === req.params.bookId);
+  const edited = books[index];
+  const newEdited = { ...edited, ...req.body, updatedAt: new Date() };
+  books[index] = newEdited;
+  writeBooks(books);
+  res.send(newEdited);
 });
 
 booksRouter.delete("/:bookId", (req, res) => {
